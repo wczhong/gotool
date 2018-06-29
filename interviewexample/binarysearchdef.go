@@ -9,7 +9,7 @@ func BinarySearchDef(data []int, key int, low int, high int) int {
 	if len(data) == 0 {
 		return -1
 	}
-	// 先找有序的一半，然后判定时候在该范围内， 注意临界值
+	// 注意临界值
 	for low <= high {
 		mid := low + (high-low)/2
 
