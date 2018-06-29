@@ -47,13 +47,13 @@ func BinarySearchDef(data []int, key int, low int, high int) int {
 				if mid+1 <= high && data[mid+1] >= data[high] {
 					return BinarySearchDef(data, key, mid+1, high)
 				}
+				// 有序则反查另一半, 因为该部分中肯定无对应的值
 				high = mid - 1
 			}
 			if key < data[high] {
 				if mid+1 <= high && data[mid+1] >= data[high] {
 					return BinarySearchDef(data, key, mid+1, high)
 				}
-				// 有序则反查另一半, 因为该部分中肯定无对应的值
 				low = mid + 1
 			}
 		}
